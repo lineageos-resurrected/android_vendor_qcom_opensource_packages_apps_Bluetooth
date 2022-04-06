@@ -1943,6 +1943,9 @@ public class AdapterService extends Service {
                             service, attributionSource, "AdapterService setDiscoverableTimeout")) {
                 return false;
             }
+
+            enforceBluetoothPrivilegedPermission(service);
+
             return service.mAdapterProperties.setDiscoverableTimeout(timeout);
         }
 
